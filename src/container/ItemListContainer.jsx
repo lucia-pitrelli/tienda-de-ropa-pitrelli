@@ -1,16 +1,13 @@
-import  ItemList from "./ItemList"
+import ItemList from "./ItemList";
+import "./itemListContainer.css";
 
-
-const ItemListContainer = ( {greeting} ) => {
-    return (
-
-        <div>
-        <div style={{color: 'purple', fontSize:'32px', fontFamily:'sans-serif', padding: '190px'}}> {greeting} </div>
-        
-    <ItemList></ItemList>
+const ItemListContainer = ({ greeting }) => {
+  return (
+    <div>
+      <div class="greeting"> {greeting} </div>
+      <ItemList></ItemList>
     </div>
-    )
-}
+  );
+};
 
 export default ItemListContainer;
-
