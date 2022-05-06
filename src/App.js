@@ -15,7 +15,8 @@ function App() {
       />
 
       <NavBar />
-      <ItemListContainer greeting="Bienvenido a Mujer Bonita" />
+      <h2>Las ofertas de la semana</h2>
+      <ItemListContainer />
       <Contador></Contador>
     </>
   );

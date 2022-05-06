@@ -6,6 +6,9 @@ const ItemCard = ({ Items }) => {
         margin: "15px",
         padding: "5px",
         width: "300px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <div
@@ -20,7 +23,12 @@ const ItemCard = ({ Items }) => {
         {" "}
         {Items.price}
       </div>
-      <div> {Items.pictureUrl}</div>
+      <div style={{ width: "300px", heigh: "300px" }}>
+        <img
+          style={{ width: "300px", height: "auto" }}
+          src={Items.pictureUrl}
+        />
+      </div>
     </div>
   );
 };
