@@ -15,7 +15,7 @@ function App() {
       />
 
       <NavBar />
-      <h2>Las ofertas de la semana</h2>
+      <h2 class="title">Las ofertas de la semana</h2>
       <ItemListContainer />
       <Contador></Contador>
     </>
