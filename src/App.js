@@ -1,22 +1,24 @@
-import logo from "./mujerLogo.jpeg";
-import "./App.css";
+import Logo from "./components/Logo";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./container/ItemListContainer";
 import Contador from "./components/ItemCount";
+import Title from "./components/Title";
+import ItemDetailContainer from "./container/ItemDetailContainer";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <img
-        src={logo}
-        style={{ width: "100px", height: "100px", padding: "20px" }}
-        className="App-logo"
-        alt="logo"
-      />
+      <BrowserRouter>
+        <Logo />
+        <NavBar />
+        <Routes>
+          <Route path="/" element={((<Title />), (<ItemListContainer />))} />
+          <Route path="/items/:itemId" element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
 
-      <NavBar />
-      <h2 class="title">Las ofertas de la semana</h2>
-      <ItemListContainer />
       <Contador></Contador>
     </>
   );
